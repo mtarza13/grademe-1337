@@ -32,9 +32,6 @@ This shell aims to provide better practice for exams. By dividing the exam into 
 
 ## Introducing
 
-- Use
-
-![Use](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjk5Y2ZmMjI4YTRmMzdiNjFmODgzMTkyYmMyYjZiZDZjYzQzYjQwNSZjdD1n/ntov5KjibEst89joIt/giphy.gif)
 
 - test
 
