@@ -46,7 +46,7 @@ This shell aims to provide better practice for exams. By dividing the exam into 
 1.  Firstly, clone the repo to your desired directory using the `git clone` command:
     
     ```bash
-    git clone https://github.com/emreakdik/42ExamPractice
+    git clone https://github.com/Tboooot/42ExamPractice
     ```
     
 2.  Then, navigate to the 42ExamPractice directory and run the following command in the terminal:
