@@ -1,7 +1,7 @@
 ## Kurulum Talimatlari
 
 ilk olarak git clone komutuyla repo'yu istediginiz dizine clonelayin.
-> git clone https://github.com/emreakdik/42ExamPractice
+> git clone https://github.com/Tboooot/42ExamPractice
 
 Daha sonra 42ExamPractice dizinine gidin ve terminalden asagidaki komutu calistirin.
 > bash exampractice.sh
