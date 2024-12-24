@@ -19,16 +19,16 @@
 - Confusing script errors that come with compile errors were hidden.
 - Missing subjects added (ft_strrev, ft_strcspn, ft_list_foreach, lcm, print_bits, reverse_bits, wdmatch).
 ```
-Turkce Talimatlar: [Baglanti](https://github.com/emreakdik/42ExamPractice/blob/main/tr.md)
+Turkce Talimatlar: [Baglanti](https://github.com/Tboooot/42ExamPractice/blob/main/tr.md)
 
 This shell aims to provide better practice for exams. By dividing the exam into levels, it allows you to solve consecutive questions at your desired level to make your practice more efficient. Additionally, by using the "test" command, the shell tests your code for you.
 
 ## Table of Contents
 
--   [Introducing](https://github.com/emreakdik/42ExamPractice#introducing)
--   [Install Instructions](https://github.com/emreakdik/42ExamPractice#install-instructions)
--   [User Guide](https://github.com/emreakdik/42ExamPractice#user-guide)
--   [Usage Of The "rendu" Folder](https://github.com/emreakdik/42ExamPractice#usage-of-the-rendu-folder)
+-   [Introducing](https://github.com/Tboooot/42ExamPractice#introducing)
+-   [Install Instructions](https://github.com/Tboooot/42ExamPractice#install-instructions)
+-   [User Guide](https://github.com/Tboooot/42ExamPractice#user-guide)
+-   [Usage Of The "rendu" Folder](https://github.com/Tboooot/42ExamPractice#usage-of-the-rendu-folder)
 
 ## Introducing
 
