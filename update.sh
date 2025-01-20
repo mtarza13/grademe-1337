@@ -11,7 +11,7 @@ rm README.md
 rm tr.md
 echo ""
 
-git clone https://github.com/emreakdik/42ExamPractice
+git clone https://github.com/Tboooot/42ExamPractice
 echo "${GREEN}${BOLD}UPDATING...${RESET}"
 echo ""
 sleep 1
