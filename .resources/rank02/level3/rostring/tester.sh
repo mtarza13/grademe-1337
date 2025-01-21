@@ -75,5 +75,5 @@ file2=../../../../rendu/rostring/rostring.c
 
 
     rm out1 out2 out1.txt out2.txt 2>/dev/null
-    echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
+    echo "$(tput setaf 2)$(tput bold)3zwaa$(tput sgr 0)"
     exit 1
