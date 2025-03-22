@@ -1,41 +1,31 @@
+<div align="center">
+  
+# 🚀 1337 Exam Practice Tool
 
+<img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge" alt="Version"/>
+<img src="https://img.shields.io/badge/Platform-Linux-orange?style=for-the-badge&logo=linux" alt="Platform"/>
+<img src="https://img.shields.io/badge/Language-Bash-green?style=for-the-badge&logo=gnu-bash" alt="Language"/>
 
-> !!!don't forget to star the repo
+**An advanced tool designed to help 1337 School students master their exam skills**
 
-**Compatible Operating Systems:**
+</div>
 
-1.  Firstly, clone the repo to your desired directory using the `git clone` command:
+---
 
-    ```bash
-    git clone https://github.com/Tboooot/42ExamPractice
-    ```
-    
-2.  Then, navigate to the 42ExamPractice directory and run the following command in the terminal:
-    
-    ```bash
-    bash exampractice.sh
-    ```
-    
-    Congratulations, you have accessed the shell.
-    
+## <span style="color:#007bff">📌 Introduction</span>
 
-## User Guide
+The **1337 Exam Practice Tool** is specifically designed to assist 1337 School students in preparing for various exams such as **Rank 02** and **Rank 03**. This tool provides a comprehensive set of practical exercises and assessment tools to enhance your programming skills and exam readiness.
 
-The usage of the shell is quite simple. In the selection screens, you need to choose which exam and level you want to practice.
+## <span style="color:#28a745">🔥 Features</span>
 
-After the questions appear, there are several actions you can take, which are:
+- 🏆 **Realistic Exam Simulation** - Experience authentic 1337 Exam environments
+- 💻 **Support for Multiple Modules** - Practice with `ft_printf`, `get_next_line`, and more
+- 📊 **Personal Progress Tracking** - Monitor your improvement over time
+- ⚡ **Automatic Updates** - Always stay current with the latest features
 
--   After writing the code that the subject requires, you can test your code by typing `test`.
--   You can type `next` to move on to the next subject.
--   You can type `menu` to return to the menu.
--   You can type `exit` to exit the shell.
+## <span style="color:#fd7e14">🚀 Installation & Usage</span>
 
-You can also view the commands by selecting the "Commands" option in the main menu.
+### **1️⃣ Running the Tool**
 
-## Usage Of The "rendu" Folder:
-
-In order for the shell to find and test your code correctly, you need to specify the location where you write your code as if you were in an exam.
-
-When you access the menu, the program will create a "rendu" folder inside the 42ExamPractice folder. Let's say you are trying to solve the "first_word" question.
-
-What you need to do is create a "first_word" folder inside the "rendu" folder and write your code inside the "first_word.c" file.
+```bash
+./exam_1337
