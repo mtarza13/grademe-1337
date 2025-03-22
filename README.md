@@ -62,5 +62,4 @@ Code
 
 Enter your choice (1-5) or 'exit' to quit:
 🎯 Good luck with your exams! 🚀
-<img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20for-1337%20Students-blueviolet?style=for-the-badge" alt="Made with love"/> </div> ```
-I've made the following improvements:
+
