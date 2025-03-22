@@ -124,6 +124,7 @@ main() {
     printf "${CYAN}│${RESET}%$(($menu_width - 2))s${CYAN}│${RESET}\n" ""
     menu_item "1" "Exam Rank 02" $menu_width
     menu_item "2" "Exam Rank 03         " $menu_width
+    menu_item "" "Exam Rank 04(in progres)..         " $menu_width
     menu_item "3" "Commands" $menu_width
     menu_item "4" "Update Shell ${YELLOW}[Latest Version Check]${RESET}     " $menu_width
     menu_item "5" "Open Rendu Folder" $menu_width
