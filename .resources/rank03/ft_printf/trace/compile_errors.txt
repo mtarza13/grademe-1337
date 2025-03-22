@@ -1,0 +1,54 @@
+test_main.c: In function ‘main’:
+test_main.c:25:38: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘void *’ [-Wformat=]
+   25 |     real_ret = printf("NULL String: %s\n", NULL);
+      |                                     ~^
+      |                                      |
+      |                                      char *
+      |                                     %p
+test_main.c:25:16: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+   25 |     real_ret = printf("NULL String: %s\n", NULL);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../rendu/ft_printf/ft_printf.c: In function ‘ft_putstr’:
+../../../rendu/ft_printf/ft_printf.c:29:7: error: lvalue required as left operand of assignment
+   29 |   str = "(null)";
+      |       ^
+../../../rendu/ft_printf/ft_printf.c:29:17: error: expected ‘)’ before ‘;’ token
+   29 |   str = "(null)";
+      |                 ^
+      |                 )
+../../../rendu/ft_printf/ft_printf.c:28:5: note: to match this ‘(’
+   28 |  if (!
+      |     ^
+../../../rendu/ft_printf/ft_printf.c:33:1: error: expected expression before ‘}’ token
+   33 | }
+      | ^
+../../../rendu/ft_printf/ft_printf.c:25:6: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+   25 |  int i;
+      |      ^
+../../../rendu/ft_printf/ft_printf.c:33:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   33 | }
+      | ^
+../../../rendu/ft_printf/ft_printf.c: At top level:
+../../../rendu/ft_printf/ft_printf.c:36:2: warning: data definition has no type or storage class
+   36 |  count = 0;
+      |  ^~~~~
+../../../rendu/ft_printf/ft_printf.c:36:2: warning: type defaults to ‘int’ in declaration of ‘count’ [-Wimplicit-int]
+../../../rendu/ft_printf/ft_printf.c:37:2: error: expected identifier or ‘(’ before ‘if’
+   37 |  if (n < 0)
+      |  ^~
+../../../rendu/ft_printf/ft_printf.c:42:2: error: expected identifier or ‘(’ before ‘if’
+   42 |  if (n >= base)
+      |  ^~
+../../../rendu/ft_printf/ft_printf.c:44:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘+=’ token
+   44 |  count += write(1, &digits[n % base], 1);
+      |        ^~
+../../../rendu/ft_printf/ft_printf.c:45:2: error: expected identifier or ‘(’ before ‘return’
+   45 |  return (count);
+      |  ^~~~~~
+../../../rendu/ft_printf/ft_printf.c:46:1: error: expected identifier or ‘(’ before ‘}’ token
+   46 | }
+      | ^
+../../../rendu/ft_printf/ft_printf.c: In function ‘ft_handle_format’:
+../../../rendu/ft_printf/ft_printf.c:71:11: warning: implicit declaration of function ‘ft_putnbr_base’ [-Wimplicit-function-declaration]
+   71 |   return (ft_putnbr_base(va_arg(args, int), 10, "0123456789"));
+      |           ^~~~~~~~~~~~~~
