@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Color definitions
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
@@ -10,22 +9,18 @@ CYAN='\033[0;36m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
-# Set paths
 STUDENT_DIR="../../../rendu/ft_printf"
 STUDENT_FILE="${STUDENT_DIR}/ft_printf.c"
 TRACE_DIR="trace"
 
-# Create trace directory
-mkdir -p "$TRACE_DIR"
+mkdir -p "../../../$TRACE_DIR"
 rm -f "$TRACE_DIR"/*
 
-# Verify file exists
 if [ ! -f "$STUDENT_FILE" ]; then
     echo -e "${RED}${BOLD}FAILURE - ft_printf.c file not found${RESET}"
     exit 1
 fi
 
-# Create test file
 cat > test_main.c << 'EOL'
 #include <stdio.h>
 #include <stdlib.h>
@@ -96,11 +91,9 @@ int main(void)
 }
 EOL
 
-# Compile with colorful output
 echo -e "${BLUE}${BOLD}Compiling your ft_printf...${RESET}"
 gcc -Wall -Wextra -o ft_printf_test test_main.c "$STUDENT_FILE" 2> "${TRACE_DIR}/compile_errors.txt"
 
-# Check compilation and show errors immediately if there are any
 if [ $? -ne 0 ]; then
     echo -e "${RED}${BOLD}╔════════════════════════ FAILURE ═════════════════════════╗${RESET}"
     echo -e "${RED}${BOLD}║              Compilation error:                           ║${RESET}"
@@ -109,15 +102,12 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Run tests and capture output
 echo -e "${CYAN}${BOLD}Running tests...${RESET}"
 ./ft_printf_test > "${TRACE_DIR}/output.txt" 2>&1
 
-# Check for errors
 errors=""
 failed_tests=0
 
-# Process output line by line to detect differences
 while read -r line; do
     if [[ $line =~ Real:\ ([0-9]+)\ \|\ Yours:\ ([0-9]+) ]]; then
         real="${BASH_REMATCH[1]}"
@@ -143,10 +133,8 @@ while read -r line; do
     fi
 done < "${TRACE_DIR}/output.txt"
 
-# Clean up
 rm -f test_main.c ft_printf_test
 
-# Show results
 if [ $failed_tests -eq 0 ]; then
     echo -e "${GREEN}${BOLD}╔════════════════════════ SUCCESS ═════════════════════════╗${RESET}"
     echo -e "${GREEN}${BOLD}║            All tests passed successfully!                 ║${RESET}"
