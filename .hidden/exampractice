@@ -2,9 +2,7 @@
 DECODED_SCRIPT="$(mktemp)"
 trap 'rm -f "$DECODED_SCRIPT"' EXIT
 
-# Decode from .resources
 base64 -d <<< "IyEvYmluL2Jhc2gKZWNobyAiSGlkZGVuIFNjcmlwdCBSdW5uaW5nISIK" > "$DECODED_SCRIPT"
 
-# Execute with original functionality
 chmod +x "$DECODED_SCRIPT"
 "$DECODED_SCRIPT" "$@"
