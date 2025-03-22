@@ -61,26 +61,6 @@ Code
 ╰══════════════════════════════════════════════════════════╯
 
 Enter your choice (1-5) or 'exit' to quit:
-<span style="color:#17a2b8">🛠️ Tools & Exam Support</span>
-<div align="center"> <table> <tr> <td align="center"><img src="https://img.shields.io/badge/Rank%2002-Active-success?style=for-the-badge" alt="Rank 02"/></td> <td align="center"><img src="https://img.shields.io/badge/Rank%2003-Active-success?style=for-the-badge" alt="Rank 03"/></td> <td align="center"><img src="https://img.shields.io/badge/Rank%2004-In%20Progress-yellow?style=for-the-badge" alt="Rank 04"/></td> </tr> <tr> <td> <ul> <li><span style="color:#4ecdc4">ft_printf</span></li> <li><span style="color:#ff6b6b">get_next_line</span></li> <li><span style="color:#ffe66d">inter/union</span></li> </ul> </td> <td> <ul> <li><span style="color:#4ecdc4">mini_paint</span></li> <li><span style="color:#ff6b6b">micro_paint</span></li> <li><span style="color:#ffe66d">ft_printf (advanced)</span></li> </ul> </td> <td> <ul> <li><span style="color:#7e5bef">microshell</span></li> <li><span style="color:#7e5bef">netpractice</span></li> <li><span style="color:#7e5bef">modules (coming soon)</span></li> </ul> </td> </tr> </table> </div>
-3️⃣ Updating the Tool
-To get the latest updates, select Option 4 from the main menu.
-
-4️⃣ Accessing the Rendu Folder
-To access your saved exercises, use Option 5.
-
-<span style="color:#dc3545">🔒 Source Code Protection</span>
-The source code of this tool is protected to maintain its security and prevent unauthorized modifications. If you encounter any issues, please contact the developer directly.
-
-<span style="color:#6f42c1">📜 Requirements</span>
-Linux operating system
-Bash Shell support
-Current version displays date/time in UTC format: YYYY-MM-DD HH:MM:SS
-Tracks user login: Currently showing as mtarza
-<span style="color:#17a2b8">🤝 Contribution & Support</span>
-If you have suggestions or encounter any problems, feel free to open an Issue in the GitHub repository.
-
-<div align="center">
 🎯 Good luck with your exams! 🚀
 <img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20for-1337%20Students-blueviolet?style=for-the-badge" alt="Made with love"/> </div> ```
 I've made the following improvements:
