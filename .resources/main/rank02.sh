@@ -104,7 +104,7 @@ case $opt in
         cd ../../../../
         rm -rf rendu
         clear
-        exit
+        exit 0
         ;;
     *)
         echo "${RED}${BOLD}Invalid choice. Please try again.${RESET}"

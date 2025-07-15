@@ -1,6 +1,13 @@
 #!/bin/bash
 
 source colors.sh
+source logging.sh
+
+# Initialize logging and configuration
+init_logging
+load_config
+system_health_check
+
 mkdir -p ../../rendu
 clear
 
@@ -124,17 +131,17 @@ main() {
     printf "${CYAN}│${RESET}%$(($menu_width - 2))s${CYAN}│${RESET}\n" ""
     menu_item "1" "Exam Rank 02" $menu_width
     menu_item "2" "Exam Rank 03         " $menu_width
-    menu_item "" "Exam Rank 04(in progres)..         " $menu_width
-    menu_item "3" "Commands" $menu_width
-    menu_item "4" "Update Shell ${YELLOW}[Latest Version Check]${RESET}     " $menu_width
-    menu_item "5" "Open Rendu Folder" $menu_width
+    menu_item "3" "Exam Rank 04 ${YELLOW}[BETA]${RESET}         " $menu_width
+    menu_item "4" "Commands" $menu_width
+    menu_item "5" "Update Shell ${YELLOW}[Latest Version Check]${RESET}     " $menu_width
+    menu_item "6" "Open Rendu Folder" $menu_width
     printf "${CYAN}│${RESET}%$(($menu_width - 2))s${CYAN}│${RESET}\n" ""
     
     # Footer
     menu_footer $menu_width
     
     # Prompt
-    printf "\n${BOLD}${GREEN}Enter your choice (1-5) or 'exit' to quit: ${RESET}"
+    printf "\n${BOLD}${GREEN}Enter your choice (1-6) or 'exit' to quit: ${RESET}"
     read opt
 
     case $opt in
@@ -147,6 +154,11 @@ main() {
             bash rank03.sh         
             ;;
         3)
+            wait_animation "LOADING EXAM RANK 04" 0.15
+            cd ../rank04
+            bash rank04.sh
+            ;;
+        4)
             wait_animation "LOADING COMMAND HELP" 0.15
             bash help.sh
             ;;
@@ -155,14 +167,14 @@ main() {
             cd ../../../../
             rm -rf rendu
             clear
-            exit 1
+            exit 0
             ;;
-        4)
+        5)
             wait_animation "CHECKING FOR UPDATES" 0.15
             cd ../../
             bash update.sh
             ;;
-        5)
+        6)
             wait_animation "OPENING RENDU FOLDER" 0.15
             cd ../../rendu
             open .
@@ -170,7 +182,7 @@ main() {
             bash menu.sh
             ;;
         *)
-            echo "Invalid choice. Please enter a number from 1 to 5."
+            echo "Invalid choice. Please enter a number from 1 to 6."
             sleep 1
             clear
             bash menu.sh

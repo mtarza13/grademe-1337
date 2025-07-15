@@ -71,7 +71,7 @@ while true; do
             exit)
                 cd ../../../../
                 rm -rf rendu
-                exit 1
+                exit 0
                 ;;
         esac
     done   
