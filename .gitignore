@@ -1,0 +1,52 @@
+# GradeMe-1337 .gitignore
+# Exclude temporary files and directories
+
+# Logs and traces
+logs/*.log
+logs/*.csv
+trace/
+analytics/
+reports/
+
+# Temporary compilation files
+**/*.o
+**/*.out
+**/out1
+**/out2
+**/out1.txt
+**/out2.txt
+**/compile_errors.txt
+**/expected_output.txt
+**/student_output.txt
+
+# Cache directories
+trace/cache/
+.cache/
+
+# Backup files
+backups/
+*.tar.gz
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary binaries
+**/reference_binary
+**/student_binary
+**/ft_printf_test
+**/test_main.c
+**/a.out
+
+# User rendu directory (student work)
+rendu/
+
+# Configuration backups
+config/*.backup
