@@ -2,11 +2,18 @@
 
 source colors.sh
 source logging.sh
+source backup_system.sh
 
-# Initialize logging and configuration
+# Initialize logging, configuration, and backup systems
 init_logging
 load_config
+init_backup_system
 system_health_check
+
+# Create automatic backup if enabled and rendu exists
+if [ "${AUTO_BACKUP:-1}" = "1" ] && [ -d "../../rendu" ] && [ "$(ls -A ../../rendu 2>/dev/null)" ]; then
+    create_backup "auto_session_start"
+fi
 
 mkdir -p ../../rendu
 clear
@@ -133,15 +140,16 @@ main() {
     menu_item "2" "Exam Rank 03         " $menu_width
     menu_item "3" "Exam Rank 04 ${YELLOW}[BETA]${RESET}         " $menu_width
     menu_item "4" "Commands" $menu_width
-    menu_item "5" "Update Shell ${YELLOW}[Latest Version Check]${RESET}     " $menu_width
-    menu_item "6" "Open Rendu Folder" $menu_width
+    menu_item "5" "Backup Management ${CYAN}[NEW]${RESET}     " $menu_width
+    menu_item "6" "Update Shell ${YELLOW}[Latest Version Check]${RESET}     " $menu_width
+    menu_item "7" "Open Rendu Folder" $menu_width
     printf "${CYAN}│${RESET}%$(($menu_width - 2))s${CYAN}│${RESET}\n" ""
     
     # Footer
     menu_footer $menu_width
     
     # Prompt
-    printf "\n${BOLD}${GREEN}Enter your choice (1-6) or 'exit' to quit: ${RESET}"
+    printf "\n${BOLD}${GREEN}Enter your choice (1-7) or 'exit' to quit: ${RESET}"
     read opt
 
     case $opt in
@@ -162,6 +170,12 @@ main() {
             wait_animation "LOADING COMMAND HELP" 0.15
             bash help.sh
             ;;
+        5)
+            wait_animation "LOADING BACKUP SYSTEM" 0.15
+            source backup_system.sh
+            init_backup_system
+            backup_manager
+            ;;
         exit)
             wait_animation "EXITING SYSTEM" 0.15
             cd ../../../../
@@ -169,12 +183,12 @@ main() {
             clear
             exit 0
             ;;
-        5)
+        6)
             wait_animation "CHECKING FOR UPDATES" 0.15
             cd ../../
             bash update.sh
             ;;
-        6)
+        7)
             wait_animation "OPENING RENDU FOLDER" 0.15
             cd ../../rendu
             open .
@@ -182,7 +196,7 @@ main() {
             bash menu.sh
             ;;
         *)
-            echo "Invalid choice. Please enter a number from 1 to 6."
+            echo "Invalid choice. Please enter a number from 1 to 7."
             sleep 1
             clear
             bash menu.sh
